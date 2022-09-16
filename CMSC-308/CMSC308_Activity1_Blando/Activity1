@@ -1,0 +1,28 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+
+ namespace Activity1
+ {
+   public class Program
+   {
+     public static void Main(string[] args)
+     {
+       string[] Email = {"raivenblando@gmail.com","blando_raiven@gmail.com","ven073001@gmail.com" };
+       
+       string[] Password = {"Raiven0123", "Blandoraiven", "Hulaanmopassko"};
+       
+       string[] Username = {"RaivenBlando", "RaivenB", "Ven Blando"};
+       
+       Console.Write("Index : ");
+       int Index = Convert.ToInt32(Console.ReadLine());
+       
+       Console.WriteLine("Email : " + Email[Index]);
+       Console.WriteLine("Password : " + Password[Index]);
+       Console.WriteLine("Username : " + Username[Index]);
+     }
+   }
+ }
