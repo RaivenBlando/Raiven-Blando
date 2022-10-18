@@ -1,0 +1,52 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace AHashset
+{
+  class Program
+  {
+    public static void Main(string[] args)
+    {
+      HashSet<int> mySet1 = new HashSet<int>();
+      Console.WriteLine("====HashSet 1====");
+      for(int i=0; i<5; i++)
+      {
+        Console.Write("Element {0}:", i);
+        
+        int num = Convert.ToInt32(Console.ReadLine());
+        mySet1.Add(num);
+      }
+      HashSet<int> mySet2 = new HashSet<int>();
+      Console.WriteLine("\n====HashSet 2====");
+      for(int j=0; j<5; j++)
+      {
+        Console.Write("Element {0}:", j);
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        mySet2.Add(num1);
+      }
+      var resultUnion = mySet1.Union(mySet2);
+      System.Console.Write("UNION:");
+      foreach (var item in resultUnion)
+      {
+         Console.Write(item);
+      }
+      var resultIntersect = mySet1.Intersect(mySet2);
+      System.Console.Write("\nINTERSECTION:");
+      foreach (var item in resultIntersect)
+      {
+         Console.Write(item);
+         }
+      var resultExcept = mySet1.Except(mySet2);
+      System.Console.Write("\nSET DIFFERENCE:");
+      foreach (var item in resultExcept)
+      {
+         Console.Write(item);
+      }
+    
+    }
+  }
+} 
+ 
