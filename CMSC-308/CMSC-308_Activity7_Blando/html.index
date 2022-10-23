@@ -1,0 +1,108 @@
+import java.io.*;
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+    char operator;
+    double number1, number2, result;
+
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Calculator Menu");
+    System.out.println("Choose an operation:");
+    System.out.println("[1] Addition");
+    System.out.println("[2] Subtraction");
+    System.out.println("[3] Multiplecation");
+    System.out.println("[4] Division");
+    System.out.println("[5] Exponent");
+    System.out.println("[6] Modulo");
+    System.out.println("[7] Exit");
+    System.out.println("\n");
+    operator = input.next().charAt(0);
+
+    switch (operator) {
+
+      case '1':
+        System.out.println("\n*Addition Operator*");
+    System.out.println("Enter the augend:");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter the addend:");
+    number2 = input.nextDouble();
+        result = number1 + number2;
+        System.out.println("The sum of " + number1 + " and " + number2 + " is " + result);
+        break;
+
+           
+      case '2':
+        System.out.println("\n*Subtraction Operator*");
+    System.out.println("Enter the minuend:");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter subtrahend");
+    number2 = input.nextDouble();
+        result = number1 - number2;
+        System.out.println("The difference of " + number1 + " and " + number2 + " is " + result);
+        break;
+
+      case '3':
+        System.out.println("\n*Multiplication Operator*");
+    System.out.println("Enter the multiplicand:");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter the multiplier:");
+    number2 = input.nextDouble();
+        result = number1 * number2;
+        System.out.println("The product of " + number1 + " and " + number2 + " is " + result);
+        break;
+
+      case '4':
+        System.out.println("\n*Division Operator*");
+    System.out.println("Enter first number");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter second number");
+    number2 = input.nextDouble();
+        result = number1 / number2;
+        System.out.println("The Quotient of " + number1 + " and " + number2 + " is " + result);
+        break;
+        
+        case '5':
+           System.out.println("\n*Exponent Operator*");
+    System.out.println("Enter the base:");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter the exponent:");
+        number2 = input.nextDouble();
+        result = Math.pow(number1, number2);
+
+    System.out.println("The Answer of " + number1 + " and " + number2 + " is " + result);
+
+      default:
+        System.out.println("Invalid operator!");
+        break;
+        
+        case '6':
+           System.out.println("\n*Modulo Operator*");
+    System.out.println("Enter the dividend");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter the Divisor");
+    number2 = input.nextDouble();
+
+         result = number1 % number2;
+
+    System.out.println("The remainder of " + number1 + " and " + number2 + " is " + result);
+        break;
+        
+        case '7':
+           
+    System.out.println("Okay!! Thankyou!");
+        break;
+    }
+
+    input.close();
+  }
+}
